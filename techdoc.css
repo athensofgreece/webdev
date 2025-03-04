@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+}
+
+/* Navbar Styles */
+#navbar {
+  position: fixed;
+  min-width: 250px;
+  width: 300px;
+  height: 100vh;
+  border-right: 2px solid #ccc;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+#navbar header {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-link {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #495057;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+/* Main Doc Styles */
+#main-doc {
+  margin-left: 300px;
+  padding: 20px 40px;
+  max-width: 1000px;
+}
+
+.main-section {
+  margin-bottom: 50px;
+}
+
+.main-section header {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.main-section p {
+  margin-bottom: 15px;
+}
+
+.main-section ul, .main-section ol {
+  margin: 15px 0 15px 30px;
+}
+
+.main-section li {
+  margin-bottom: 10px;
+}
+
+.main-section code {
+  display: block;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border-left: 4px solid #3498db;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  #main-doc {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .main-section header {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-section code {
+    font-size: 14px;
+  }
+  
+  #navbar header {
+    font-size: 1.5rem;
+  }
+}
