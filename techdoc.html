@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Documentation</title>
+  <link rel="stylesheet" href="techdoc.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Web Development Guide</header>
+    <a class="nav-link" href="#HTML_Basics">HTML Basics</a>
+    <a class="nav-link" href="#CSS_Fundamentals">CSS Fundamentals</a>
+    <a class="nav-link" href="#JavaScript_Essentials">JavaScript Essentials</a>
+    <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+    <a class="nav-link" href="#Web_Accessibility">Web Accessibility</a>
+  </nav>
+  
+  <main id="main-doc">
+    <section class="main-section" id="HTML_Basics">
+      <header>HTML Basics</header>
+      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page and consists of a series of elements that tell the browser how to display the content.</p>
+      <p>HTML elements are represented by tags, written using angle brackets. Tags come in pairs with an opening and closing tag.</p>
+      <p>The basic structure of an HTML document includes the following elements:</p>
+      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </code>
+      <p>HTML5 introduced many new semantic elements that provide more meaningful structure to web documents:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code> - Represents a container for introductory content</li>
+        <li><code>&lt;nav&gt;</code> - Defines a set of navigation links</li>
+        <li><code>&lt;section&gt;</code> - Defines a section in a document</li>
+        <li><code>&lt;article&gt;</code> - Defines an independent, self-contained content</li>
+        <li><code>&lt;footer&gt;</code> - Defines a footer for a document or section</li>
+      </ul>
+    </section>
+    
+    <section class="main-section" id="CSS_Fundamentals">
+      <header>CSS Fundamentals</header>
+      <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls how HTML elements are displayed on screen, paper, or in other media.</p>
+      <p>There are three ways to insert CSS into your HTML document:</p>
+      <ul>
+        <li>External CSS - Using a separate .css file</li>
+        <li>Internal CSS - Using the &lt;style&gt; element in the &lt;head&gt; section</li>
+        <li>Inline CSS - Using the style attribute in HTML elements</li>
+      </ul>
+      <p>The CSS syntax consists of a selector and a declaration block:</p>
+      <code>
+selector {
+  property: value;
+  property: value;
+}
+      </code>
+      <p>CSS selectors are used to "find" (or select) the HTML elements you want to style. They can be based on element name, id, class, and more.</p>
+      <p>The CSS Box Model is fundamental to understanding layout in CSS. Every element in web design is a rectangular box with properties:</p>
+      <code>
+.box {
+  margin: 10px;
+  border: 5px solid black;
+  padding: 15px;
+  width: 300px;
+}
+      </code>
+    </section>
+    
+    <section class="main-section" id="JavaScript_Essentials">
+      <header>JavaScript Essentials</header>
+      <p>JavaScript is a programming language that enables interactive web pages. It's an essential part of web applications and can update content, control multimedia, animate images, and much more.</p>
+      <p>JavaScript can be added to your HTML file in two ways:</p>
+      <ul>
+        <li>Internal JavaScript - Using the &lt;script&gt; element</li>
+        <li>External JavaScript - Using a separate .js file</li>
+      </ul>
+      <p>Variables in JavaScript can be declared using <code>var</code>, <code>let</code>, or <code>const</code>:</p>
+      <code>
+// Using var (function scoped)
+var name = "John";
+
+// Using let (block scoped)
+let age = 25;
+
+// Using const (block scoped, cannot be reassigned)
+const PI = 3.14159;
+      </code>
+      <p>Functions are blocks of code designed to perform a particular task. They are executed when they are called:</p>
+      <p>JavaScript has many built-in objects like Array, Date, Math, and String that provide useful functionality:</p>
+      <code>
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+// Call the function
+console.log(greet("World"));  // Outputs: Hello, World!
+      </code>
+    </section>
+    
+    <section class="main-section" id="Responsive_Design">
+      <header>Responsive Design</header>
+      <p>Responsive web design makes your web page look good on all devices. It uses CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.</p>
+      <p>The key components of responsive design include:</p>
+      <ul>
+        <li>Flexible layouts using relative units</li>
+        <li>Responsive images that scale nicely</li>
+        <li>Media queries to apply different styles for different devices</li>
+      </ul>
+      <p>Media queries allow you to apply different styles based on the device characteristics:</p>
+      <code>
+@media screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+  
+  .container {
+    width: 100%;
+  }
+}
+      </code>
+      <p>The viewport meta tag ensures that your page looks good on all devices:</p>
+      <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+      <p>Flexible grids use percentages instead of fixed units to create layouts that can adapt to different screen sizes. Modern CSS offers powerful layout systems like Flexbox and Grid:</p>
+      <p>CSS Flexbox is designed for one-dimensional layouts (either rows or columns), while CSS Grid is designed for two-dimensional layouts (rows and columns together).</p>
+    </section>
+    
+    <section class="main-section" id="Web_Accessibility">
+      <header>Web Accessibility</header>
+      <p>Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. Accessibility benefits everyone, not just people with disabilities.</p>
+      <p>The Web Content Accessibility Guidelines (WCAG) provide a set of recommendations for making web content more accessible. The guidelines are organized around four principles:</p>
+      <ul>
+        <li>Perceivable - Information must be presentable to users in ways they can perceive</li>
+        <li>Operable - User interface components must be operable</li>
+        <li>Understandable - Information and operation must be understandable</li>
+        <li>Robust - Content must be robust enough to be interpreted by a wide variety of user agents</li>
+      </ul>
+      <p>Semantic HTML is crucial for accessibility as it provides meaning to the content structure:</p>
+      <code>
+&lt;!-- Not semantic --&gt;
+&lt;div class="header"&gt;Header&lt;/div&gt;
+
+&lt;!-- Semantic --&gt;
+&lt;header&gt;Header&lt;/header&gt;
+      </code>
+      <p>ARIA (Accessible Rich Internet Applications) is a set of attributes that define ways to make web content and web applications more accessible:</p>
+      <code>
+&lt;button aria-label="Close" aria-describedby="description"&gt;X&lt;/button&gt;
+&lt;div id="description"&gt;Closes the dialog&lt;/div&gt;
+      </code>
+      <p>Always ensure that your websites have keyboard navigation support, sufficient color contrast, and proper text alternatives for non-text content.</p>
+    </section>
+  </main>
+</body>
+</html>
