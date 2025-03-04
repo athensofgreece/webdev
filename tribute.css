@@ -2,3 +2,17 @@ h1 {
   font-family: Tahoma;
   text-align: center;
 }
+
+body {
+  background-color: #87CEEB;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+a {
+  color: black;
+}
