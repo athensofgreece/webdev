@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #81C784;
+    --text-color: #333;
+    --background-color: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#header-img {
+    max-height: 50px;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    margin-top: 80px;
+}
+
+#hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+#products {
+    padding: 3rem 5%;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#video-section {
+    text-align: center;
+    padding: 3rem 5%;
+    background-color: white;
+}
+
+#video {
+    max-width: 100%;
+}
+
+#about {
+    background-color: white;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+#signup {
+    background-color: var(--background-color);
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#email, #submit {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+    }
+
+    #nav-bar {
+        margin-top: 10px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+    }
+}
