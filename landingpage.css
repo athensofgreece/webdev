@@ -86,6 +86,10 @@ main {
     border-radius: 10px;
 }
 
+li {
+    list-style-type: none;
+}
+
 #video-section {
     text-align: center;
     padding: 3rem 5%;
